@@ -1,16 +1,66 @@
-# React + Vite
+✅ React Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and simple React-based Todo List to manage daily tasks — built to showcase my frontend development skills.
+This project demonstrates React fundamentals, state management, and clean UI practices, making it ideal for entry-level React developer roles.
 
-Currently, two official plugins are available:
+⚡ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+➕ Add new tasks
 
-## React Compiler
+✅ Mark tasks as complete
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+❌ Delete tasks
 
-## Expanding the ESLint configuration
+💾 LocalStorage persistence (coming soon)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧩 Simple, minimal, and responsive UI
+
+🧠 What I Learned
+
+Building components and managing state using React Hooks (useState, useEffect)
+
+Writing clean, readable, and maintainable code
+
+Using Git & GitHub effectively for version control
+
+Creating a project from setup → commit → documentation
+
+🛠 Tech Stack
+Category	Technology
+Frontend	React (CRA or Vite)
+Language	JavaScript (ES6+)
+Styling	CSS / Tailwind (optional)
+Tools	Git & GitHub
+⚙️ Setup Instructions
+# 1️⃣ Clone the repository
+git clone https://github.com/Harsh01-02/React-Todo-App.git
+
+# 2️⃣ Navigate to project folder
+cd React-Todo-App
+
+# 3️⃣ Install dependencies
+npm install
+
+# 4️⃣ Start the development server
+npm start
+
+🚀 Future Plans
+
+🌙 Add Dark/Light mode
+
+🗂 Include task categories and deadlines
+
+📱 Optimize for mobile devices
+
+☁️ Deploy the app using Netlify or Vercel
+
+👨‍💻 About Me
+
+Hi, I’m Harsh — an aspiring React Developer from India (2025), passionate about creating clean, user-friendly web apps.
+I’m focused on learning deeply, building consistently, and contributing to real-world projects.
+
+📍 Connect with me:
+
+🌐 GitHub: @Harsh01-02
+
+💼 LinkedIn: (Add your LinkedIn link here)
