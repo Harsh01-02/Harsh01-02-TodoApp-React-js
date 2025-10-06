@@ -1,14 +1,36 @@
 import React, { useState } from "react";
 
 const App = () => {
-  const [task, setTask] = useState("");
-  const [todoList, setTodoList] = useState([]);
+  const [task, setTask] = useState(""); // current input value
+  const [todoList, setTodoList] = useState([]); // all tasks
+
+  //  Add task function
+  const addTask = () => {
+    if (task.trim() === "") return; // avoid empty input
+    setTodoList([...todoList, task]); // add to list
+    setTask(""); // clear input
+  };
 
   return (
     <div>
       <h1>Todo List</h1>
-      <p>Task: {task}</p>
-      <p>Number of tasks: {todoList.length}</p>
+
+      {/* Input + Button */}
+      <input
+        type="text"
+        placeholder="Enter a task"
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+      />
+      <button onClick={addTask}>Add</button>
+
+      {/* Display tasks */}
+      <h3>Tasks ({todoList.length})</h3>
+      <ul>
+        {todoList.map((task, index) => (
+          <li key={index}>{task}</li>
+        ))}
+      </ul>
     </div>
   );
 };
