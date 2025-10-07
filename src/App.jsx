@@ -4,11 +4,17 @@ const App = () => {
   const [task, setTask] = useState(""); // current input value
   const [todoList, setTodoList] = useState([]); // all tasks
 
-  //  Add task function
+  // Add task function
   const addTask = () => {
     if (task.trim() === "") return; // avoid empty input
     setTodoList([...todoList, task]); // add to list
     setTask(""); // clear input
+  };
+
+  // Delete task function
+  const deleteTask = (index) => {
+    const updatedList = todoList.filter((_, i) => i !== index);
+    setTodoList(updatedList);
   };
 
   return (
@@ -28,7 +34,10 @@ const App = () => {
       <h3>Tasks ({todoList.length})</h3>
       <ul>
         {todoList.map((task, index) => (
-          <li key={index}>{task}</li>
+          <li key={index}>
+            {task}{" "}
+            <button onClick={() => deleteTask(index)}>❌</button>
+          </li>
         ))}
       </ul>
     </div>
