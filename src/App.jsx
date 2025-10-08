@@ -7,13 +7,22 @@ const App = () => {
   // Add task function
   const addTask = () => {
     if (task.trim() === "") return; // avoid empty input
-    setTodoList([...todoList, task]); // add to list
+    const newTask = { text: task, completed: false }; // store task as object
+    setTodoList([...todoList, newTask]); // add to list
     setTask(""); // clear input
   };
 
   // Delete task function
   const deleteTask = (index) => {
     const updatedList = todoList.filter((_, i) => i !== index);
+    setTodoList(updatedList);
+  };
+
+  // Toggle complete/incomplete
+  const toggleTask = (index) => {
+    const updatedList = todoList.map((item, i) =>
+      i === index ? { ...item, completed: !item.completed } : item
+    );
     setTodoList(updatedList);
   };
 
@@ -35,7 +44,18 @@ const App = () => {
       <ul>
         {todoList.map((task, index) => (
           <li key={index}>
-            {task}{" "}
+            <input
+              type="checkbox"
+              checked={task.completed}
+              onChange={() => toggleTask(index)}
+            />
+            <span
+              style={{
+                textDecoration: task.completed ? "line-through" : "none",
+              }}
+            >
+              {task.text}
+            </span>{" "}
             <button onClick={() => deleteTask(index)}>❌</button>
           </li>
         ))}
